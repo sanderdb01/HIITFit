@@ -19,6 +19,10 @@
 		CD30C94925147AEF0049DB93 /* sun-salute.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CD30C94525147AEF0049DB93 /* sun-salute.mp4 */; };
 		E193FD8F2A5B73FD00FEA458 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E193FD8E2A5B73FD00FEA458 /* WelcomeView.swift */; };
 		E193FD912A5B741400FEA458 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E193FD902A5B741400FEA458 /* ExerciseView.swift */; };
+		E193FD942A5BB4F100FEA458 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E193FD932A5BB4F100FEA458 /* HeaderView.swift */; };
+		E193FD962A5D02C800FEA458 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = E193FD952A5D02C800FEA458 /* Exercise.swift */; };
+		E193FD982A677B8C00FEA458 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E193FD972A677B8C00FEA458 /* RatingView.swift */; };
+		E193FD9A2A677CBD00FEA458 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E193FD992A677CBD00FEA458 /* VideoPlayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		CD30C94525147AEF0049DB93 /* sun-salute.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sun-salute.mp4"; sourceTree = "<group>"; };
 		E193FD8E2A5B73FD00FEA458 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		E193FD902A5B741400FEA458 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
+		E193FD932A5BB4F100FEA458 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		E193FD952A5D02C800FEA458 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Exercise.swift; path = Views/Exercise.swift; sourceTree = "<group>"; };
+		E193FD972A677B8C00FEA458 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		E193FD992A677CBD00FEA458 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +76,7 @@
 		CD30C922251474DC0049DB93 /* HIITFit */ = {
 			isa = PBXGroup;
 			children = (
+				E193FD952A5D02C800FEA458 /* Exercise.swift */,
 				CD30C923251474DC0049DB93 /* HIITFitApp.swift */,
 				E193FD922A5B742D00FEA458 /* Views */,
 				CD30C93D25147A8C0049DB93 /* DateExtension.swift */,
@@ -105,6 +114,9 @@
 				CD30C925251474DC0049DB93 /* ContentView.swift */,
 				E193FD8E2A5B73FD00FEA458 /* WelcomeView.swift */,
 				E193FD902A5B741400FEA458 /* ExerciseView.swift */,
+				E193FD932A5BB4F100FEA458 /* HeaderView.swift */,
+				E193FD972A677B8C00FEA458 /* RatingView.swift */,
+				E193FD992A677CBD00FEA458 /* VideoPlayerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -207,11 +219,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E193FD912A5B741400FEA458 /* ExerciseView.swift in Sources */,
+				E193FD962A5D02C800FEA458 /* Exercise.swift in Sources */,
 				E193FD8F2A5B73FD00FEA458 /* WelcomeView.swift in Sources */,
+				E193FD982A677B8C00FEA458 /* RatingView.swift in Sources */,
 				CD30C926251474DC0049DB93 /* ContentView.swift in Sources */,
 				CD30C93F25147A8C0049DB93 /* DateExtension.swift in Sources */,
 				CD30C924251474DC0049DB93 /* HIITFitApp.swift in Sources */,
 				CD30C94025147A8C0049DB93 /* ImageExtension.swift in Sources */,
+				E193FD942A5BB4F100FEA458 /* HeaderView.swift in Sources */,
+				E193FD9A2A677CBD00FEA458 /* VideoPlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
