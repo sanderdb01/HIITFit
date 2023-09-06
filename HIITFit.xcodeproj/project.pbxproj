@@ -27,6 +27,7 @@
 		E193FD9E2A6EDB7B00FEA458 /* HistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E193FD9D2A6EDB7B00FEA458 /* HistoryStore.swift */; };
 		E193FDA12A6EE70900FEA458 /* HistoryStoreDevData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E193FDA02A6EE70900FEA458 /* HistoryStoreDevData.swift */; };
 		E193FDA32A6F03CA00FEA458 /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E193FDA22A6F03CA00FEA458 /* SuccessView.swift */; };
+		E1B23C462AA8BE470039126D /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B23C452AA8BE470039126D /* TimerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		E193FD9D2A6EDB7B00FEA458 /* HistoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStore.swift; sourceTree = "<group>"; };
 		E193FDA02A6EE70900FEA458 /* HistoryStoreDevData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStoreDevData.swift; sourceTree = "<group>"; };
 		E193FDA22A6F03CA00FEA458 /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
+		E1B23C452AA8BE470039126D /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				E193FD992A677CBD00FEA458 /* VideoPlayerView.swift */,
 				E193FD9B2A6ECF6200FEA458 /* HistoryView.swift */,
 				E193FDA22A6F03CA00FEA458 /* SuccessView.swift */,
+				E1B23C452AA8BE470039126D /* TimerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1B23C462AA8BE470039126D /* TimerView.swift in Sources */,
 				E193FD912A5B741400FEA458 /* ExerciseView.swift in Sources */,
 				E193FD962A5D02C800FEA458 /* Exercise.swift in Sources */,
 				E193FD8F2A5B73FD00FEA458 /* WelcomeView.swift in Sources */,

@@ -3,6 +3,9 @@ import AVKit
 
 struct ExerciseView: View {
   @Binding var selectedTab: Int
+  @State private var rating = 0
+  @State private var showHistory = false
+  @State private var showSuccess = false
   let index: Int
   var exercise: Exercise {
     Exercise.exercises[index]
@@ -10,34 +13,54 @@ struct ExerciseView: View {
   var lastExercise:Bool {
     index + 1 == Exercise.exercises.count
   }
-  let interval: TimeInterval = 30
+  @State private var timerDone = false
+  @State private var showTimer = false
   var startButton: some View {
-    Button("Start Exercise"){}
+    Button("Start Exercise"){
+      showTimer.toggle()
+    }
   }
   var doneButton: some View {
     Button("Done") {
-      selectedTab = lastExercise ? 9 : selectedTab + 1
+      timerDone = false
+      showTimer.toggle()
+      if lastExercise {
+        showSuccess.toggle()
+      } else {
+        selectedTab += 1
+      }
     }
   }
   var body: some View {
     GeometryReader { geometry in
-      VStack {
+      VStack(spacing:0) {
         HeaderView(selectedTab: $selectedTab, titleText: Exercise.exercises[index].exerciseName)
           .padding(.bottom)
         VideoPlayerView(videoName: exercise.videoName)
           .frame(height: geometry.size.height * 0.45)
-        Text(Date().addingTimeInterval(interval), style: .timer)
-          .font(.system(size: geometry.size.height * 0.07))
         HStack(spacing: 150) {
           startButton
           doneButton
+            .disabled(!timerDone)
+            .sheet(isPresented: $showSuccess) {
+              SuccessView(selectedTab: $selectedTab)
+                .presentationDetents([.medium, .large])
+            }
         }
         .font(.title3)
         .padding()
-        RatingView()
-          .padding()
+        if showTimer {
+          TimerView(timerDone: $timerDone, size: geometry.size.height * 0.07)
+        }
         Spacer()
-        Button("History") {}
+        RatingView(rating: $rating)
+          .padding()
+        Button("History") {
+          showHistory.toggle()
+        }
+        .sheet(isPresented: $showHistory) {
+          HistoryView(showHistory: $showHistory)
+        }
           .padding(.bottom)
       }
     }
@@ -46,6 +69,6 @@ struct ExerciseView: View {
 
 struct ExerciseView_Previews: PreviewProvider {
     static var previews: some View {
-      ExerciseView(selectedTab: .constant(1), index: 1)
+      ExerciseView(selectedTab: .constant(3), index: 3)
     }
 }
